@@ -9,5 +9,11 @@ public class StudentService {
     @Autowired
     StudentRepository studentRepository;
 
+    public void addStudent(Student student){
+        studentRepository.addStudent(student);
+    }
 
+    public void addTeacher(Teacher teacher){
+        studentRepository.addTeacher(teacher);
+    }
 }

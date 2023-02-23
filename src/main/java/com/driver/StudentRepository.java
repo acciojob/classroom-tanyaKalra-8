@@ -17,5 +17,13 @@ public class StudentRepository {
         teacherStudentHashMap = new HashMap<>();
     }
 
+    public void addStudent(Student student){
+        String name = student.getName();
+        studentHashMap.put(name,student);
+    }
 
+    public void addTeacher(Teacher teacher){
+        String name = teacher.getName();
+        teacherHashMap.put(name,teacher);
+    }
 }
