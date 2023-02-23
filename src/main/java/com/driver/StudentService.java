@@ -3,6 +3,8 @@ package com.driver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentService {
 
@@ -15,5 +17,25 @@ public class StudentService {
 
     public void addTeacher(Teacher teacher){
         studentRepository.addTeacher(teacher);
+    }
+
+    public void studentTeacherPair(String student, String teacher){
+        studentRepository.studentTeacherPair(student,teacher);
+    }
+
+    public Student getStudentByName(String name){
+        return studentRepository.getStudentByName(name);
+    }
+
+    public Teacher getTeacherByName(String name){
+        return studentRepository.getTeacherByName(name);
+    }
+
+    public List<String> getStudentsByTeacherName(String teacher){
+        return studentRepository.getStudentsByTeacherName(teacher);
+    }
+
+    public List<String> getAllStudents(){
+        return studentRepository.getAllStudents();
     }
 }
